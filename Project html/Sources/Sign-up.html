@@ -125,63 +125,64 @@
             <div class="col-md-9">
                 <div class="jumbotron" style="width: 100%">
                     <h3 class="title-team">SIGN UP</h3>
+                    <form method="post" action="" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="First-name">First-name:</label>
+                            <input class="form-control" type="text" name="first-name" id="firstname" placeholder="">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="First-name">First-name:</label>
-                        <input class="form-control" type="text" name="first-name" placeholder="">
-                    </div>
+                        <div class="form-group">
+                            <label for="Last-name">Last-name:</label>
+                            <input class="form-control" type="text" name="last-name" id="lastname" placeholder="">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="Last-name">Last-name:</label>
-                        <input class="form-control" type="text" name="last-name" placeholder="">
-                    </div>
+                        <div class="form-group">
+                            <label for="Username">User Name:</label>
+                            <input class="form-control" type="text" name="username" id="username" placeholder="">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="Username">User Name:</label>
-                        <input class="form-control" type="text" name="username" placeholder="">
-                    </div>
+                        <div class="form-group">
+                            <label for="Password">Password:</label>
+                            <input class="form-control" type="password" name="password" id="password" placeholder="">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="Password">Password:</label>
-                        <input class="form-control" type="password" name="password" placeholder="">
-                    </div>
+                        <div class="form-group">
+                            <label for="ConfirmPassword">Confirm Password:</label>
+                            <input class="form-control" type="password" name="cfpassword" id="cfpassword" placeholder="">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="ConfirmPassword">Confirm Password:</label>
-                        <input class="form-control" type="password" name="cfpassword" placeholder="">
-                    </div>
+                        <div class="form-group">
+                            <label for="Email">Email:</label>
+                            <input class="form-control" type="text" name="email" placeholder="">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="Email">Email:</label>
-                        <input class="form-control" type="text" name="email" placeholder="">
-                    </div>
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input class="form-control" type="text" name="address" placeholder="">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="address">Address:</label>
-                        <input class="form-control" type="text" name="address" placeholder="">
-                    </div>
-
-                    <fieldset class="form-group">
-                        <div class="row">
-                            <legend class="col-form-label col-sm-2 pt-0">Sex:</legend>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                    <label class="form-check-label" for="gridRadios1">
-                                        Male
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                    <label class="form-check-label" for="gridRadios2">
-                                        Female
-                                    </label>
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Sex:</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Male
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            Female
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </fieldset>
+                        </fieldset>
 
-                    <button type="button" class="btn btn-primary">REGISTER</button>
+                        <input type="submit" name="login" value="Register" />
+                    </form>
                 </div>
             </div>
             <!-- end content -->
@@ -406,5 +407,31 @@
     <!-- Footer -->
     <!-- end footer -->
 </body>
+<script>
+    function validateForm() {
+
+        var username = document.getElementsByTagName('username').value;
+        var password = document.getElementById('password').value;
+        var cfpassword = document.getElementById('cfpassword').value;
+        var firstname = document.getElementById('firstname').value;
+        var lastname = document.getElementById('lastname').value;
+        if (firstname == '') {
+            alert("Bạn chưa nhập first-name");
+        } else if (lastname == '') {
+            alert("Bạn chưa nhập last-name");
+        } else if (username == '') {
+            alert('Bạn chưa nhập tên đăng nhập');
+        } else if (password == '') {
+            alert('Bạn chưa nhập mật khẩu');
+        } else if (cfpassword == '') {
+            alert('Bạn chưa nhập mật khẩu');
+        } else {
+            alert('Đăng kí thành công');
+            return true;
+        }
+
+        return false;
+    }
+</script>
 
 </html>
