@@ -29,6 +29,24 @@
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/mycss.css">
 
+    <style>
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+        }
+
+        /* Style the submit button */
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -47,7 +65,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="../Sources/Home.html">Home
                         <span class="sr-only">(current)</span>
                     </a>
@@ -68,7 +86,7 @@
                     <a class="nav-link" href="../Sources/Post.html">Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Sources/Sign-in.html">Sign in</a>
+                    <a class="nav-link active" href="../Sources/Sign-in.html">Sign in</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../Sources/Sign-up.html">Sign up</a>
@@ -137,7 +155,7 @@
                         </div>
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">&nbspRemember Password</label>
+                            <label class="form-check-label" for="exampleCheck1">Remember Password</label>
                         </div>
                         <br>
 
@@ -373,24 +391,9 @@
     <!-- Footer -->
     <!-- end footer -->
 </body>
-<script>
-    function validateForm() {
-
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-
-   
-        if (username == '') {
-            alert('Bạn chưa nhập tên đăng nhập');
-        } else if (password == '') {
-            alert('Bạn chưa nhập mật khẩu');
-        } else {
-            alert('Đăng nhập thành công.Xin chào ' + username);
-            return true;
-        }
-
-        return false;
-    }
-</script>
+<script src='js/xgrmnr.js'></script>
+<script src="js/index.js"></script>
+<script src="js/main-script.js"></script>
+<script src="js/canvas.js"></script>
 
 </html>

@@ -1,4 +1,3 @@
-// Hoa
 var canvas = document.getElementById('canvas-line-team');
 if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -50,4 +49,3 @@ if (canvas3.getContext) {
     ctx3.lineTo(300, 7);
     ctx3.fill();
 }
-// Hoa
