@@ -276,3 +276,147 @@ img.img-artical-me {
     opacity: 1;
 }
 /* end css for footer */
+
+/* History */
+
+.title-team {
+    color: #e64b39;
+    font-weight: bold;
+    text-align: center;
+}
+div.content-history-team {
+    padding-top: 40px;
+    height: 0px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+div.datetime {
+    width: 30%;
+    float: left;
+    text-align: center;
+    color: rgb(137, 137, 137);
+    font-size: 30px;
+    padding-top: 5px;
+}
+
+div.historyText {
+    width: 65%;
+    float: left;
+    color: rgb(137, 137, 137);
+    padding: 0px 0px 65px 30px;
+}
+
+div.historyText::before {
+    content: '';
+    position: absolute;
+    width: 96.5%;
+    height: 160px;
+    left: 15px;
+    right: 15px;
+    margin-top: -10px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: white;
+    z-index: -1;
+}
+
+div.datetime::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: auto;
+    background-color: rgb(137, 137, 137);
+    top: 210px;
+    bottom: 130px;
+    left: 30%;
+    margin-left: -3px;
+}
+
+div.datetime::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 7px solid rgb(137, 137, 137);
+    border-radius: 50%;
+    left: 28.3%;
+    margin-top: -7px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+    div.datetime::before {
+        left: 28%;
+    }
+    div.datetime {
+        font-size: 20px;
+    }
+    div.historyText::before {
+        width: 95.9%;
+        height: 210px;
+        margin-top: -10px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    div.datetime::before {
+        left: 27.4%;
+    }
+    div.historyText::before {
+        width: 94.5%;
+        height: 210px;
+        margin-top: -10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div.datetime::after {
+        left: 10%;
+    }
+    div.datetime::before {
+        left: 7%;
+    }
+    div.datetime {
+        margin-bottom: 15px;
+        width: 100%;
+        font-size: 30px;
+    }
+    div.historyText {
+        padding-left: 15%;
+        width: 100%;
+    }
+    div.historyText::before {
+        width: 94.5%;
+        height: 250px;
+        margin-top: -45px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    div.historyText::before {
+        width: 93%;
+        height: 300px;
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    div.datetime::before {
+        left: 6%;
+    }
+    div.historyText::before {
+        width: 92%;
+        height: 300px;
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    div.historyText::before {
+        width: 90.5%;
+        height: 300px;
+        margin-top: -50px;
+    }
+}
+
+/* /History */
